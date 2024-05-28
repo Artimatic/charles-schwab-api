@@ -1,5 +1,5 @@
 {
-  "name": "davidcchan",
+  "name": "artimatic",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "src",
   "projectType": "application",
@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/davidcchan",
+        "outputPath": "dist/artimatic",
         "format": ["cjs"],
         "bundle": false,
         "main": "src/main.ts",
@@ -41,15 +41,23 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "davidcchan:build"
+        "buildTarget": "artimatic:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "davidcchan:build:development"
+          "buildTarget": "artimatic:build:development"
         },
         "production": {
-          "buildTarget": "davidcchan:build:production"
+          "buildTarget": "artimatic:build:production"
         }
+      }
+    },
+    "local-registry": {
+      "executor": "@nx/js:verdaccio",
+      "options": {
+        "port": 4873,
+        "config": ".verdaccio/config.yml",
+        "storage": "tmp/local-registry/storage"
       }
     }
   }
