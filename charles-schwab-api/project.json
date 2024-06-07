@@ -1,0 +1,36 @@
+{
+  "name": "charles-schwab-api",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "charles-schwab-api/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist\\{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "pack": {
+      "command": "cd dist/charles-schwab-api && npm pack"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/charles-schwab-api",
+        "tsConfig": "charles-schwab-api/tsconfig.lib.json",
+        "packageJson": "charles-schwab-api/package.json",
+        "main": "charles-schwab-api/src/index.ts",
+        "assets": ["charles-schwab-api/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist\\{projectRoot}"
+      }
+    }
+  }
+}
