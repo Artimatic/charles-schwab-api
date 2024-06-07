@@ -1,4 +1,9 @@
 {
   "name": "charles-schwab-api",
-  "version": "0.0.6"
+  "version": "0.0.6",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Artimatic/charles-schwab-api"
+  }
 }
