@@ -1,6 +1,6 @@
 # charles-schwab-api
 
-API wrapper for Charles Schwab Accounts and Trading, Market Data APIs
+Unofficial API wrapper for Charles Schwab Accounts and Trading, Market Data APIs
 
 ## Installation
 

@@ -135,7 +135,6 @@ export function getMarketData(appKey: string, appSecret: string, symbol: string,
 }
 
 export function getPriceHistory(appKey: string, appSecret: string, symbol: string) {
-
   const query = `${charlesSchwabMarketDataUrl}pricehistory`;
   const options = {
     url: query,
