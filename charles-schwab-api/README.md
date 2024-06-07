@@ -1,11 +1,45 @@
 # charles-schwab-api
 
-This library was generated with [Nx](https://nx.dev).
+API wrapper for Charles Schwab Accounts and Trading, Market Data APIs
 
-## Building
+## Installation
 
-Run `nx build charles-schwab-api` to build the library.
+```
+npm install charles-schwab-api
+```
 
-## Running unit tests
+## Usage
 
-Run `nx test charles-schwab-api` to execute the unit tests via [Jest](https://jestjs.io).
+### CommonJS
+```
+const charlesSchwabApi = require('charles-schwab-api'); 
+```
+### ES6
+```
+import * as charlesSchwabApi from 'charles-schwab-api';
+```
+
+Authorize
+```
+charlesSchwabApi.authorize(appKey, callbackUrl);
+```
+
+Get token
+```
+charlesSchwabApi.getAccessToken(appKey,
+      secret,
+      'authorization_code',
+      callbackUrl);
+```
+
+Refresh token
+```
+charlesSchwabApi.refreshAccessToken(appKey,
+      secret,
+      refreshToken);
+```
+
+Get account numbers
+```
+charlesSchwabApi.getAccountNumbersHashValues(appKey, secret);
+```

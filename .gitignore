@@ -39,5 +39,4 @@ testem.log
 Thumbs.db
 
 .nx/cache
-charles-schwab-api\dist\charles-schwab-api
-!charles-schwab-api
+charles-schwab-api/dist/charles-schwab-api
